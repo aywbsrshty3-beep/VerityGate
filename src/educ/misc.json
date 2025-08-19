@@ -1,0 +1,17 @@
+{
+    "id": "policy-dual-control-1",
+    "name": "Dual Control",
+    "roles": [
+        "Checker",
+        "Checker"
+    ],
+    "orgs": [
+        "OrgOne",
+        "OrgTwo"
+    ],
+    "minApprovers": [
+        1,
+        1
+    ],
+    "timeoutInSeconds": 300
+}

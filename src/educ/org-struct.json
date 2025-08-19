@@ -1,0 +1,112 @@
+{
+    "orgs": [
+        [
+            "org1",
+            {
+                "id": "org1",
+                "name": "My Org 1",
+                "enabled": true
+            }
+        ]
+    ],
+    "actors": [
+        [
+            "alice",
+            {
+                "id": "alice",
+                "name": "Alice",
+                "role": "Maker",
+                "orgId": "org1",
+                "enabled": true
+            }
+        ],
+        [
+            "bob",
+            {
+                "id": "bob",
+                "name": "Bob",
+                "role": "Checker",
+                "orgId": "org1",
+                "enabled": true
+            }
+        ]
+    ],
+    "policies": [
+        [
+            "create-policy-id-1",
+            {
+                "id": "create-policy-id-1",
+                "name": "Create Policy",
+                "orgId": "org1",
+                "subOrgApplicability": false,
+                "wishKind": "TRANSFER_OUT",
+                "ruleIds": [
+                    "create-policy-rule-id-1"
+                ],
+                "controls": [
+                    [
+                        "create-policy-rule-id-1",
+                        "create-policy-control-id-1"
+                    ]
+                ],
+                "priority": 0,
+                "enabled": true,
+                "dynamic": false,
+                "createdAt": 1752047648656
+            }
+        ]
+    ],
+    "policyRules": [
+        [
+            "create-policy-rule-id-1",
+            {
+                "id": "create-policy-rule-id-1",
+                "name": "Create Policy Rule",
+                "expression": "ctx.wish.payload.amount <= 100",
+                "enabled": true
+            }
+        ]
+    ],
+    "policyControls": [
+        [
+            "create-policy-control-id-1",
+            {
+                "id": "create-policy-control-id-1",
+                "name": "Create Policy Control",
+                "config": {
+                    "roles": [
+                        "Checker"
+                    ],
+                    "orgs": [
+                        "org1"
+                    ],
+                    "minApprover": 1,
+                    "timeoutInSeconds": 300
+                }
+            }
+        ]
+    ],
+    "wallets": [
+        [
+            "btc-wallet-1",
+            {
+                "id": "btc-wallet-1",
+                "orgId": "org1",
+                "name": "My BTC Wallet",
+                "chain": "TESTNET",
+                "provider": "DFNS"
+            }
+        ]
+    ],
+    "wish": {
+        "id": "create-tft-out-wish-1",
+        "actorId": "alice",
+        "tgtOrgId": "org1",
+        "kind": "TRANSFER_OUT",
+        "payload": {
+            "fromWallet": "FromWalletId1",
+            "toWallet": "ToWalletId2",
+            "amount": "123"
+        }
+    }
+}

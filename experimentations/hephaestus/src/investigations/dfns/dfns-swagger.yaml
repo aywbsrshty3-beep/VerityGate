@@ -1,0 +1,160 @@
+openapi: 3.0.0
+info:
+  title: DfnsProvider API
+  version: 1.0.0
+  description: API documentation for DfnsProvider
+
+paths:
+  /create-wallet:
+    post:
+      summary: Create a new wallet
+      description: This endpoint creates a new wallet.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                network:
+                  type: string
+                  description: The network for the wallet (e.g., Ethereum, Bitcoin).
+                name:
+                  type: string
+                  description: The name of the wallet.
+              required:
+                - network
+                - name
+      responses:
+        '200':
+          description: Wallet created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: The ID of the created wallet.
+                  network:
+                    type: string
+                    description: The network of the created wallet.
+                  status:
+                    type: string
+                    description: The status of the created wallet.
+                  signingKey:
+                    type: object
+                    properties:
+                      scheme:
+                        type: string
+                        description: The signing scheme.
+                      curve:
+                        type: string
+                        description: The curve used.
+                      publicKey:
+                        type: string
+                        description: The public key.
+                  address:
+                    type: string
+                    description: The address of the created wallet.
+                  name:
+                    type: string
+                    description: The name of the created wallet.
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "ERROR"
+
+  /list-wallets:
+    get:
+      summary: List all wallets
+      description: This endpoint lists all wallets.
+      responses:
+        '200':
+          description: List of wallets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: The ID of the wallet.
+                    network:
+                      type: string
+                      description: The network of the wallet.
+                    status:
+                      type: string
+                      description: The status of the wallet.
+                    signingKey:
+                      type: object
+                      properties:
+                        scheme:
+                          type: string
+                          description: The signing scheme.
+                        curve:
+                          type: string
+                          description: The curve used.
+                        publicKey:
+                          type: string
+                          description: The public key.
+                    address:
+                      type: string
+                      description: The address of the wallet.
+                    name:
+                      type: string
+                      description: The name of the wallet.
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "ERROR"
+
+components:
+  schemas:
+    Wallet:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The ID of the wallet.
+        network:
+          type: string
+          description: The network of the wallet.
+        status:
+          type: string
+          description: The status of the wallet.
+        signingKey:
+          type: object
+          properties:
+            scheme:
+              type: string
+              description: The signing scheme.
+            curve:
+              type: string
+              description: The curve used.
+            publicKey:
+              type: string
+              description: The public key.
+        address:
+          type: string
+          description: The address of the wallet.
+        name:
+          type: string
+          description: The name of the wallet.
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []

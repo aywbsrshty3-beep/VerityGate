@@ -1,0 +1,262 @@
+{
+  "items": [
+    {
+      "id": "wa-ehlij-01o79-dqonjdmn2qel5fj",
+      "network": "BitcoinTestnet3",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "02b938486c5b475ed98fb27e25d4b7c260d747e602125177a249c4960c5130b6fa"
+      },
+      "address": "tb1q5lf37m84l6ek5j03lreujlkk3a7c8nqkn69due",
+      "name": "MyBTCWallet",
+      "dateCreated": "2024-09-11T10:26:49.993Z",
+      "custodial": true,
+      "tags": [
+        "SETTLEMENT",
+        "COINBASE"
+      ]
+    },
+    {
+      "id": "wa-1ol09-a00l3-9e1p9meafj5q609u",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "0267e3b711e9cdb379e09decc9eb01de15e06a067da1fa36ad138382595a5f58ec"
+      },
+      "address": "0x4c762342bdd28fefe37cedacbc6ca04161689fed",
+      "name": "ETH-WALLET-0",
+      "dateCreated": "2024-09-26T10:07:05.167Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-5jqk8-vnome-8m1rj7pe01hffng1",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "02eb6fcfbea50e77dc5ee3446e3e98aa5fb596d98f3d64b84e28c372eaae185ba6"
+      },
+      "address": "0x8c182d6c273802081f1afc511a752167d318c3f7",
+      "name": "ETH-WALLET-1",
+      "dateCreated": "2024-09-26T10:09:11.852Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-480r5-9tc3r-80papao6dnhe39h2",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "021557abc4176adff75b98f1f495b51700add4bc2fa418600ba9d1cf7b2d92b907"
+      },
+      "address": "0x267de9082cc443dea791131a6a7f142991bc019c",
+      "name": "ETH-WALLET-2",
+      "dateCreated": "2024-09-26T10:09:21.703Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-1u9l7-917aa-9v3od7b68epht2vb",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "03b8f0a1b01391af13c5787aa434824398f80cdd41f094de0570177058e22492be"
+      },
+      "address": "0x9595e461a54e6dba576facc4a82c4928160053e4",
+      "name": "ETH-WALLET-100",
+      "dateCreated": "2024-10-01T13:24:12.492Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-1grjq-74nuk-9rgr0ea555snkd2b",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "03223a0c6425eed9b5a2b18a2d9797cf260c8c512cf2e01de34fb1f8063ea1681f"
+      },
+      "address": "0x6e0c5c33bfd8f83e5d7f8a63c37295a42feedbb3",
+      "name": "ETH-WALLET-100",
+      "dateCreated": "2024-10-01T13:27:04.719Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-4nje1-i0g6q-97dq22b7hfhvu2fd",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "0366593f23f41d792768a3e036cb6aa3ce2e44f60c01ecad9e535b12a8765f91b4"
+      },
+      "address": "0xa4563917fd000d0a5c4c4244b94f3e90a296b872",
+      "name": "ETH-WALLET-100",
+      "dateCreated": "2024-10-01T13:31:17.743Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-7pjnp-s6pil-9i2qp48st6jk21ib",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "03343187202f63d365706fad96678dffe92239943f4e82b77456d19dbf04819757"
+      },
+      "address": "0x755694130eac021272853f790f84e9e31277e0ba",
+      "name": "ETH-W-A",
+      "dateCreated": "2024-10-01T16:56:45.114Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-308li-abche-9dg903lcl7s78qo3",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "020d5fd86b64e08eae7d88317f714b09f9f9190abbad51ded4fe5e2f5b5614b0cb"
+      },
+      "address": "0x8583828e3f394b5464ad6b7e03bfcd8d4053bdc5",
+      "name": "ETH-WALLET-200",
+      "dateCreated": "2024-10-01T17:06:53.971Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-s3tt0-0pdp9-shphjtk519bm2jq",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "03fecad2120da1242eea8567ca20dc30eb51643d1542930c29391daf9c1f7704c0"
+      },
+      "address": "0xa6fc95f656e5dce63eabb233761a8cdb56f5fc2f",
+      "name": "ETH-WALLET-201",
+      "dateCreated": "2024-10-01T17:08:59.200Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-5nrmf-e9pt8-826baka0k7bg0fsd",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "020aedc9664fdb73556b1056ad1814a24cf11969ea455ed0e9ccc7f5d0cb5691b4"
+      },
+      "address": "0x701fe8e736f7a12f557547c04e78db1876a390e0",
+      "name": "ETH-WALLET-203",
+      "dateCreated": "2024-10-01T17:11:14.626Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-4pf3o-djnp0-9168uoc2i30fda8r",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "02bf25a39e13881a32b5dc97d1e82124e51af29fcb6690377fdb93b0ab103e297f"
+      },
+      "address": "0x9f925a6342ece26c8e2c985417b317ff88bcea67",
+      "name": "ETH-W-A",
+      "dateCreated": "2024-10-01T17:39:04.379Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-6r8gd-vhra5-8hupubpv9mc772ba",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "0263f853769c30377c9cfd56f804fd246239ba54beabc45254219dce4d783fb8b5"
+      },
+      "address": "0x4543a66073e7ce7cfe7366b0ad33e5fb29b5a66e",
+      "name": "ETH-W-A",
+      "dateCreated": "2024-10-01T17:45:32.921Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-3ke1l-tgqet-8eca1kfb35c50c59",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "02f116d38faa30bfe051bcf842ea39deae6de49bc1a5a572b05602a27cb3df9161"
+      },
+      "address": "0x9e80aad39c48669abeeb7802657d2839c2ea0fab",
+      "name": "ETH-W-A",
+      "dateCreated": "2024-10-01T17:46:28.394Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-irp1f-gchn8-bfa2uu01ltbe21d",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "02d67aa97ffd6b67903730d9cec454285e4e0ff6ba7e034e3c326418d4520c6e7a"
+      },
+      "address": "0xd428c2cddbd90584101bc05cb740863092fcf3cc",
+      "name": "ETH-W-A",
+      "dateCreated": "2024-10-01T17:47:08.157Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-46tam-u4apu-8b8bfirtqt858ub7",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "0279f0febeb8d7ad0c0d41709b77348e6e19bc404a0981cbfeca9d6126efed34a1"
+      },
+      "address": "0xfeba8d4183c99ba609b4ffb7c0613c40cc5a5141",
+      "name": "ETH-W-A",
+      "dateCreated": "2024-10-01T17:57:06.147Z",
+      "custodial": true,
+      "tags": []
+    },
+    {
+      "id": "wa-6r02o-vf8ud-96mo7cuv1ji311i5",
+      "network": "EthereumSepolia",
+      "status": "Active",
+      "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "022e6b7932a7a178b8bf38c2df90d700b68ebd9c01d22bc9dc06c41774d08b7c67"
+      },
+      "address": "0xf872aa7b40cdaf632d6c6130ad6eb0298fa2582f",
+      "name": "EthStlWallet0",
+      "dateCreated": "2024-10-15T07:56:04.601Z",
+      "custodial": true,
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+    "orgs": [
+        [
+            "SocGen",
+            {
+                "id": "SocGen",
+                "name": "Societe Generale",
+                "enabled": true
+            }
+        ],
+        [
+            "Forge",
+            {
+                "id": "Forge",
+                "name": "Forge",
+                "enabled": true,
+                "topOrgId": "SocGen"
+            }
+        ]
+    ],
+    "actors": [
+        [
+            "alice",
+            {
+                "id": "alice",
+                "name": "Alice",
+                "role": "Maker",
+                "orgId": "SocGen",
+                "enabled": true
+            }
+        ],
+        [
+            "bob",
+            {
+                "id": "bob",
+                "name": "Bob",
+                "role": "Checker",
+                "orgId": "SocGen",
+                "enabled": true
+            }
+        ],
+        [
+            "dave",
+            {
+                "id": "dave",
+                "name": "Dave",
+                "role": "Maker",
+                "orgId": "Forge",
+                "enabled": true
+            }
+        ],
+        [
+            "carol",
+            {
+                "id": "carol",
+                "name": "Carol",
+                "role": "Checker",
+                "orgId": "Forge",
+                "enabled": true
+            }
+        ]
+    ],
+    "policies": [
+        [
+            "topOrgPolicy-1",
+            {
+                "id": "topOrgPolicy-1",
+                "name": "Top Org Transfer Compliance Policy",
+                "orgId": "SocGen",
+                "subOrgApplicability": false,
+                "wishKind": "TRANSFER_OUT",
+                "ruleIds": [
+                    "topOrgComplianceRule-1"
+                ],
+                "controls": [
+                    [
+                        "topOrgComplianceRule-1",
+                        "topOrgComplianceControl-1"
+                    ]
+                ],
+                "priority": 0,
+                "enabled": true,
+                "dynamic": false,
+                "createdAt": 1752141501102
+            }
+        ],
+        [
+            "sub-transfer-policy-1",
+            {
+                "id": "sub-transfer-policy-1",
+                "name": "Sub Transfer Policy",
+                "orgId": "Forge",
+                "subOrgApplicability": false,
+                "wishKind": "TRANSFER_OUT",
+                "ruleIds": [
+                    "subPolicyRule"
+                ],
+                "controls": [
+                    [
+                        "subPolicyRule",
+                        "subTransferContro-1"
+                    ]
+                ],
+                "priority": 0,
+                "enabled": true,
+                "dynamic": false,
+                "createdAt": 1752141501102
+            }
+        ]
+    ],
+    "policyRules": [
+        [
+            "topOrgComplianceRule-1",
+            {
+                "id": "topOrgComplianceRule-1",
+                "name": "Transfer Compliance Rule",
+                "enabled": true
+            }
+        ],
+        [
+            "subPolicyRule",
+            {
+                "id": "subPolicyRule",
+                "name": "Sub Transfer Policy Rule",
+                "expression": "ctx.wish.payload.amount <= 100",
+                "enabled": true
+            }
+        ]
+    ],
+    "policyControls": [
+        [
+            "topOrgComplianceControl-1",
+            {
+                "id": "topOrgComplianceControl-1",
+                "name": "Transfer Compliance Control",
+                "config": {
+                    "roles": [
+                        "Checker"
+                    ],
+                    "orgs": [
+                        "SocGen"
+                    ],
+                    "minApprover": 1,
+                    "timeoutInSeconds": 300
+                }
+            }
+        ],
+        [
+            "subTransferContro-1",
+            {
+                "id": "subTransferContro-1",
+                "name": "Sub Transfer Control",
+                "config": {
+                    "roles": [
+                        "Checker"
+                    ],
+                    "orgs": [
+                        "Forge"
+                    ],
+                    "minApprover": 1,
+                    "timeoutInSeconds": 300
+                }
+            }
+        ]
+    ],
+    "wallets": [
+        [
+            "forge-btc-wallet",
+            {
+                "id": "forge-btc-wallet",
+                "orgId": "Forge",
+                "name": "BTC Settlement Wallet",
+                "chain": "TESTNET",
+                "provider": "DFNS"
+            }
+        ]
+    ],
+    "wish": {
+        "id": "create-tft-out-wish-1",
+        "actorId": "carol",
+        "tgtOrgId": "Forge",
+        "kind": "TRANSFER_OUT",
+        "payload": {
+            "fromWallet": "FromWalletId1",
+            "toWallet": "ToWalletId2",
+            "amount": "90"
+        }
+    }
+}

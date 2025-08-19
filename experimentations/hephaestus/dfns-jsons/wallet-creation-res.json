@@ -1,0 +1,12 @@
+{
+    "id": "wa-1ol09-a00l3-9e1p9meafj5q609u",
+    "network": "EthereumSepolia",
+    "status": "Active",
+    "signingKey": {
+        "scheme": "ECDSA",
+        "curve": "secp256k1",
+        "publicKey": "0267e3b711e9cdb379e09decc9eb01de15e06a067da1fa36ad138382595a5f58ec"
+    },
+    "address": "0x4c762342bdd28fefe37cedacbc6ca04161689fed",
+    "name": "ETH-WALLET-0"
+}

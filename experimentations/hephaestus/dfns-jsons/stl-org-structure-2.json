@@ -1,0 +1,229 @@
+{
+    "orgs": {
+        "ORG2": {
+            "id": "ORG2",
+            "name": "ORG2",
+            "enabled": true
+        },
+        "EXC": {
+            "id": "EXC",
+            "name": "EXC",
+            "enabled": true
+        },
+        "HSS": {
+            "id": "HSS",
+            "name": "HSS",
+            "enabled": true
+        }
+    },
+    "actors": {
+        "MAKER_ORG2": {
+            "id": "MAKER_ORG2",
+            "name": "MAKER_ORG2",
+            "role": "MAKER",
+            "orgId": "ORG2",
+            "enabled": true
+        },
+        "CHECKER_ORG2": {
+            "id": "CHECKER_ORG2",
+            "name": "CHECKER_ORG2",
+            "role": "CHECKER",
+            "orgId": "ORG2",
+            "enabled": true
+        },
+        "MAKER_EXC": {
+            "id": "MAKER_EXC",
+            "name": "MAKER_EXC",
+            "role": "MAKER",
+            "orgId": "EXC",
+            "enabled": true
+        },
+        "CHECKER_EXC": {
+            "id": "CHECKER_EXC",
+            "name": "CHECKER_EXC",
+            "role": "CHECKER",
+            "orgId": "EXC",
+            "enabled": true
+        },
+        "MAKER_HSS": {
+            "id": "MAKER_HSS",
+            "name": "MAKER_HSS",
+            "role": "MAKER",
+            "orgId": "HSS",
+            "enabled": true
+        },
+        "CHECKER_HSS": {
+            "id": "CHECKER_HSS",
+            "name": "CHECKER_HSS",
+            "role": "CHECKER",
+            "orgId": "HSS",
+            "enabled": true
+        }
+    },
+    "policies": {
+        "org2-wish-pol-39d23e506a6afe4c": {
+            "id": "org2-wish-pol-39d23e506a6afe4c",
+            "name": "Org2 Wish Creation Policy",
+            "orgId": "ORG2",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "org-wish-rule-332a00d9c1e33aea"
+            ],
+            "controls": {},
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "WISH_CREATION",
+            "subOrgApplicability": false
+        },
+        "hss-wish-pol-2-f716b0bf26763976": {
+            "id": "hss-wish-pol-2-f716b0bf26763976",
+            "name": "HSS Wish Creation Policy",
+            "orgId": "ORG2",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "hss-wish-rule-org2-0d973daf8d747ecd"
+            ],
+            "controls": {},
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "WISH_CREATION",
+            "subOrgApplicability": false
+        },
+        "org2-create-pol-74c0f55be754c0f0": {
+            "id": "org2-create-pol-74c0f55be754c0f0",
+            "name": "Create Policy Policy",
+            "orgId": "ORG2",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "org-create-pol-rule-1eb3ff0293b8a614"
+            ],
+            "controls": {},
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "CREATE_POLICY",
+            "subOrgApplicability": false
+        },
+        "org2-wallet-pol-989f7a610f7cd30c": {
+            "id": "org2-wallet-pol-989f7a610f7cd30c",
+            "name": "Create Wallet Policy",
+            "orgId": "ORG2",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "org-create-pol-rule-1eb3ff0293b8a614"
+            ],
+            "controls": {
+                "org-create-pol-rule-1eb3ff0293b8a614": "org2-create-pol-ctrl-22acb63794c2f191"
+            },
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "CREATE_WALLET",
+            "subOrgApplicability": false
+        },
+        "create-tft-out-pol-2-a4802c080c2c8476": {
+            "id": "create-tft-out-pol-2-a4802c080c2c8476",
+            "name": "Create Tft Policy",
+            "orgId": "ORG2",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "org-create-pol-rule-1eb3ff0293b8a614"
+            ],
+            "controls": {
+                "org-create-pol-rule-1eb3ff0293b8a614": "org2-create-pol-ctrl-22acb63794c2f191"
+            },
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "TRANSFER_OUT",
+            "subOrgApplicability": false
+        },
+        "org2-stl-pol-e773d178fd982c75": {
+            "id": "org2-stl-pol-e773d178fd982c75",
+            "name": "Tft Out Policy",
+            "orgId": "ORG2",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "hss-wish-rule-org2-0d973daf8d747ecd"
+            ],
+            "controls": {
+                "hss-wish-rule-org2-0d973daf8d747ecd": "exc-tft-pol-61817dd58dd76390"
+            },
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "TRANSFER_OUT",
+            "subOrgApplicability": false
+        }
+    },
+    "rules": {
+        "org-wish-rule-332a00d9c1e33aea": {
+            "id": "org-wish-rule-332a00d9c1e33aea",
+            "name": "Org Wish Creation Rule",
+            "enabled": true,
+            "expression": "ctx.actors[ctx.wish.actorId].orgId === ctx.wish.tgtOrgId && ctx.actors[ctx.wish.actorId].role === 'MAKER'"
+        },
+        "hss-wish-rule-org2-0d973daf8d747ecd": {
+            "id": "hss-wish-rule-org2-0d973daf8d747ecd",
+            "name": "HSS Wish Creation Rule",
+            "enabled": true,
+            "expression": "\n    ctx.actors[ctx.wish.actorId].orgId === 'HSS' &&\n    ctx.wish.tgtOrgId === 'ORG2' &&\n    ctx.wish.kind === 'TRANSFER_OUT' &&\n    ctx.wallets[ctx.wish.payload.fromWallet].meta['TYPE'] === 'SETTLEMENT' &&\n    ctx.actors[ctx.wish.actorId].role === 'MAKER'\n    "
+        },
+        "org-create-pol-rule-1eb3ff0293b8a614": {
+            "id": "org-create-pol-rule-1eb3ff0293b8a614",
+            "name": "Create Policy Rule",
+            "enabled": true
+        }
+    },
+    "controls": {
+        "org2-create-pol-ctrl-22acb63794c2f191": {
+            "id": "org2-create-pol-ctrl-22acb63794c2f191",
+            "name": "Create Policy Control",
+            "config": {
+                "orgs": [
+                    "ORG2"
+                ],
+                "roles": [
+                    "CHECKER"
+                ],
+                "minApprover": 1,
+                "timeoutInSeconds": 3600
+            }
+        },
+        "exc-tft-pol-61817dd58dd76390": {
+            "id": "exc-tft-pol-61817dd58dd76390",
+            "name": "Tft Out Control",
+            "config": {
+                "orgs": [
+                    "EXC"
+                ],
+                "roles": [
+                    "CHECKER"
+                ],
+                "minApprover": 1,
+                "timeoutInSeconds": 3600
+            }
+        }
+    },
+    "wallets": {
+        "wc-876e9a15d3119252": {
+            "id": "wc-876e9a15d3119252",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-1",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG2",
+            "provider": "DFNS"
+        }
+    },
+    "wish": {
+        "id": "hss-stl-wish-leg2-9cef145d520cd21e",
+        "actorId": "MAKER_HSS",
+        "tgtOrgId": "ORG2",
+        "kind": "TRANSFER_OUT",
+        "settlementId": "stl-4d1c0e6081202735",
+        "leg1": false,
+        "payload": {
+            "fromWallet": " wc-876e9a15d3119252",
+            "toWallet": "wc-2c7e10af6afa12ca",
+            "amount": "1000000000000000"
+        }
+    }
+}

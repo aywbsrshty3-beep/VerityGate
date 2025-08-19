@@ -1,0 +1,12 @@
+{
+  "walletId": "wa-1ol09-a00l3-9e1p9meafj5q609u",
+  "network": "EthereumSepolia",
+  "assets": [
+    {
+      "kind": "Native",
+      "symbol": "SepoliaETH",
+      "decimals": 18,
+      "balance": "1000000000000000"
+    }
+  ]
+}

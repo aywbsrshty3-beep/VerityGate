@@ -1,0 +1,48 @@
+{
+    "items": [
+        {
+            "id": "plc-1nc9f-7dqoc-9vtr5fdtdr9ld7k6",
+            "name": "WALLET_DEFAULT_POLICY",
+            "status": "Active",
+            "dateCreated": "2024-09-11T10:58:08.639Z",
+            "dateUpdated": "2024-09-11T10:58:08.639Z",
+            "activityKind": "Wallets:Sign",
+            "rule": {
+                "kind": "AlwaysTrigger",
+                "configuration": {}
+            },
+            "action": {
+                "kind": "RequestApproval",
+                "approvalGroups": [
+                    {
+                        "quorum": 1,
+                        "approvers": {}
+                    }
+                ]
+            }
+        },
+        {
+            "id": "plc-3vkqs-1k5si-879agrq9mjl85c11",
+            "name": "DEFAULT_POLICY_MODIFY",
+            "status": "Active",
+            "dateCreated": "2024-09-11T10:30:02.798Z",
+            "dateUpdated": "2024-09-11T10:30:02.798Z",
+            "activityKind": "Policies:Modify",
+            "rule": {
+                "kind": "AlwaysTrigger",
+                "configuration": {}
+            },
+            "action": {
+                "kind": "RequestApproval",
+                "approvalGroups": [
+                    {
+                        "name": "COMPLIANCE",
+                        "quorum": 1,
+                        "approvers": {}
+                    }
+                ],
+                "autoRejectTimeout": 60
+            }
+        }
+    ]
+}

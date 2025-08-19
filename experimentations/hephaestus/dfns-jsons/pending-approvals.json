@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "ap-1n1jc-vjmv6-88boh7novo8r1kn5",
+      "initiatorId": "us-6k44q-aoigv-99084ek3h0drc5ia",
+      "activity": {},
+      "status": "Pending",
+      "dateCreated": "2024-10-06T14:26:53.991Z",
+      "dateUpdated": "2024-10-06T14:26:53.991Z",
+      "decisions": [],
+      "policyEvaluations": []
+    },
+    {
+      "id": "ap-53it1-eseur-857q20fal9rh6geq",
+      "initiatorId": "us-6k44q-aoigv-99084ek3h0drc5ia",
+      "activity": {},
+      "status": "Pending",
+      "dateCreated": "2024-10-05T07:50:07.739Z",
+      "dateUpdated": "2024-10-05T07:50:07.739Z",
+      "decisions": [],
+      "policyEvaluations": []
+    },
+    {
+      "id": "ap-3ro42-skrjo-8bepq2m3hjm5be30",
+      "initiatorId": "us-6k44q-aoigv-99084ek3h0drc5ia",
+      "activity": {},
+      "status": "Pending",
+      "dateCreated": "2024-10-04T10:52:25.550Z",
+      "dateUpdated": "2024-10-04T10:52:25.550Z",
+      "decisions": [],
+      "policyEvaluations": []
+    },
+    {
+      "id": "ap-1h0ql-09s40-8ru9t5knnbb31liv",
+      "initiatorId": "us-6k44q-aoigv-99084ek3h0drc5ia",
+      "activity": {},
+      "status": "Pending",
+      "dateCreated": "2024-10-04T10:24:25.642Z",
+      "dateUpdated": "2024-10-04T10:24:25.642Z",
+      "decisions": [],
+      "policyEvaluations": []
+    }
+  ],
+  "nextPageToken": "YXAtMWgwcWwtMDlzNDAtOHJ1OXQ1a25uYmIzMWxpdg=="
+}

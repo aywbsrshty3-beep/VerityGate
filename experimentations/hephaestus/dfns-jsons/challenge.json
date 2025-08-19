@@ -1,0 +1,27 @@
+{
+    "supportedCredentialKinds": [
+        {
+            "kind": "Key",
+            "factor": "either",
+            "requiresSecondFactor": false
+        }
+    ],
+    "rp": {
+        "id": "dfns.ninja",
+        "name": "Dfns"
+    },
+    "challenge": "Y2gtMnM0dDQtdTI1aHAtOWFoOGg2OGJyZTZ0cWtoag",
+    "challengeIdentifier": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFZE...",
+    "externalAuthenticationUrl": "",
+    "allowCredentials": {
+        "webauthn": [],
+        "key": [
+            {
+                "type": "public-key",
+                "id": "example-key-id"
+            }
+        ]
+    },
+    "attestation": "direct",
+    "userVerification": "required"
+}

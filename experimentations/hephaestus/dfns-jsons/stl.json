@@ -1,0 +1,17 @@
+{
+    "settlementData": {
+        "tradeId": "trade-35567000170c446f",
+        "exchangeId": "coinbase-83da9d38229b9cfe",
+        "baseAmount": "10000",
+        "baseCounterParty": "CP1",
+        "baseTokenAddress": "tb1q5lf37m84l6ek5j03lreujlkk3a7c8nqkn69due",
+        "baseNetworkId": "BTC_TESNET",
+        "termAmount": "5000000000",
+        "termCounterParty": "CP2",
+        "termTokenAddress": "0x4c762342bdd28fefe37cedacbc6ca04161689fed",
+        "termNetworkId": "ETH_SEPOLIA",
+        "creationTime": "2024-10-08T13:59:29.910Z",
+        "validFor": 60
+    },
+    "signature": "Ja1P26bIP7fQrTakR6j+voRcZjI6QNfk+KNILAfwjucCGHObiehQsZ5w0uQXX4KZlvPjvMUXdOaBCsvmiGEPLwfbqE7JY2T1fWPFwlp6IPx+ttSvqrsoYiFNg+BmqUmDAuJcxn/VgwiTTDuBOQwJ+ttR8XmH4yZRkhRJwXXdgLc/TFmbS28ZK9ryV1Kjwsl6O4Lnf4yhS0YckgyB7GWjoAsNdlRjTVgWeMJjyxOgXwp3o65zTKcKwV6VRd1OYP3QHuv+fqrxtL3P/Y1hgbtWRpebafjSXMpmgqVyWZ/m1WEfxqhOrYcdrSdHQVUOz8ZPVcY0krgmA3uu9+MaMJV5Eg=="
+}

@@ -1,0 +1,11 @@
+{
+  "challengeIdentifier": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFZERTQSJ9.eyJpc3MiOiJhdXRoLmRmbnMubmluamEiLCJhdWQiOiJkZm5zOmF1dGg6dXNlciIsInN1YiI6Im9yLTFpYWE1LTlybjNmLTlpdXF2ODRzanBmaGNqaGUiLCJqdGkiOiJ1ai0zMWVyZC1kcmp0MS05bWI4bW5ybDM0MGZucWN2Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W10sImh0dHBzOi8vY3VzdG9tL3VzZXJuYW1lIjoiMzdjQFNlcnZpY2VBY2NvdW50IiwiaHR0cHM6Ly9jdXN0b20vYXBwX21ldGFkYXRhIjp7InVzZXJJZCI6InRvLTZlZXAzLTBnc3F2LTlhYWJ0ZjNjN29oaWlvNnAiLCJvcmdJZCI6Im9yLTFpYWE1LTlybjNmLTlpdXF2ODRzanBmaGNqaGUiLCJ0b2tlbktpbmQiOiJUZW1wIiwiY2hhbGxlbmdlIjoiWTJndE5XVnBPV3N0TkRWcWJHOHRPSFp0WW5OdU9YQm5NR1pwTkc5ak5BIiwiY2hhbGxlbmdlSW5mbyI6eyJwYXlsb2FkIjoie1wibmV0d29ya1wiOlwiRXRoZXJldW1TZXBvbGlhXCIsXCJuYW1lXCI6XCJteS1ldGgtd2FsbGV0XCJ9IiwibWV0aG9kIjoiUE9TVCIsInBhdGgiOiIvd2FsbGV0cyIsInNlcnZlciI6ImFwaS5kZm5zLm5pbmphIiwic3VtbWFyeSI6IkNyZWF0ZSB3YWxsZXQgKG15LWV0aC13YWxsZXQpIG9uIEV0aGVyZXVtU2Vwb2xpYS4iLCJub25jZSI6Im5vLTJqNTRqLWhicmVkLTlrdnBrYWVtMm1qYmk4MXMifX0sImlhdCI6MTcyNzI3NzM0NywiZXhwIjoxNzI3Mjc4MjQ3fQ.6qYVFAOHs_jx_tQ1psWm1jrEtpxiZ6xjsXnITf8ZtIDcoDcVjhs-bBcEQaTzi9AY4GvkXN32yGbFgNit0oYMCw",
+  "firstFactor": {
+    "kind": "Key",
+    "credentialAssertion": {
+      "credId": "Y2ktMWYyNGctM2w1MjMtOTdxOXE5azVndTBrNHJ2bA",
+      "clientData": "{\"type\":\"key.get\",\"challenge\":\"Y2gtNWVpOWstNDVqbG8tOHZtYnNuOXBnMGZpNG9jNA\",\"origin\":\"https://app.dfns.ninja\",\"crossOrigin\":false}",
+      "signature": "d3+mPt6z6dKL0QQAmjUgGLI3wKbcolWvHQ25BYlkJxiDaqiVH4fvcyKZ6Djy/TZKdN8z+hxz0psHuKKfDfWt7ovVxu5WZ3W/TLr0MwbvihZv5Qu/50zhZDN4caoAV2TtLT5ZaKls6s6oExr07vDn13JPhgW7x7EkDQbp4RGBwep9dtYekKxzf2ElGL+h/ABsm5Kkr+SI5HRO2MZTFNeb19EDJjYci3NNu1ChgtLI+Yb9e67laG2zA8PSt8p8VBLuHaavbRsYMOU6OUGqGl5/NO/h79CHwdGlniiEcEdHveMALg6JQaFMFSDvzBVwqfLXBjg4XLv2kGHB/ozGtZN0xw=="
+    }
+  }
+}

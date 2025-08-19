@@ -1,0 +1,379 @@
+{
+    "orgs": {
+        "ORG1": {
+            "id": "ORG1",
+            "name": "ORG1",
+            "enabled": true
+        },
+        "EXC": {
+            "id": "EXC",
+            "name": "EXC",
+            "enabled": true
+        },
+        "HSS": {
+            "id": "HSS",
+            "name": "HSS",
+            "enabled": true
+        }
+    },
+    "actors": {
+        "MAKER_ORG1": {
+            "id": "MAKER_ORG1",
+            "name": "MAKER_ORG1",
+            "role": "MAKER",
+            "orgId": "ORG1",
+            "enabled": true
+        },
+        "CHECKER_ORG1": {
+            "id": "CHECKER_ORG1",
+            "name": "CHECKER_ORG1",
+            "role": "CHECKER",
+            "orgId": "ORG1",
+            "enabled": true
+        },
+        "MAKER_EXC": {
+            "id": "MAKER_EXC",
+            "name": "MAKER_EXC",
+            "role": "MAKER",
+            "orgId": "EXC",
+            "enabled": true
+        },
+        "CHECKER_EXC": {
+            "id": "CHECKER_EXC",
+            "name": "CHECKER_EXC",
+            "role": "CHECKER",
+            "orgId": "EXC",
+            "enabled": true
+        },
+        "MAKER_HSS": {
+            "id": "MAKER_HSS",
+            "name": "MAKER_HSS",
+            "role": "MAKER",
+            "orgId": "HSS",
+            "enabled": true
+        },
+        "CHECKER_HSS": {
+            "id": "CHECKER_HSS",
+            "name": "CHECKER_HSS",
+            "role": "CHECKER",
+            "orgId": "HSS",
+            "enabled": true
+        }
+    },
+    "policies": {
+        "org1-wish-pol-d438f2121cf69aa7": {
+            "id": "org1-wish-pol-d438f2121cf69aa7",
+            "name": "Org1 Wish Creation Policy",
+            "orgId": "ORG1",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "org-wish-rule-332a00d9c1e33aea"
+            ],
+            "controls": {},
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "WISH_CREATION",
+            "subOrgApplicability": false
+        },
+        "hss-wish-pol-1-7b9fa0335a3e7aec": {
+            "id": "hss-wish-pol-1-7b9fa0335a3e7aec",
+            "name": "HSS Wish Creation Policy",
+            "orgId": "ORG1",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "hss-wish-rule-org1-0376b885338fae0a"
+            ],
+            "controls": {},
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "WISH_CREATION",
+            "subOrgApplicability": false
+        },
+        "org1-create-pol-180d80fa9f3fd4ee": {
+            "id": "org1-create-pol-180d80fa9f3fd4ee",
+            "name": "Create Policy Policy",
+            "orgId": "ORG1",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "org-create-pol-rule-1eb3ff0293b8a614"
+            ],
+            "controls": {},
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "CREATE_POLICY",
+            "subOrgApplicability": false
+        },
+        "org1-wallet-pol-d8c80425f3f0b07e": {
+            "id": "org1-wallet-pol-d8c80425f3f0b07e",
+            "name": "Create Wallet Policy",
+            "orgId": "ORG1",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "org-create-pol-rule-1eb3ff0293b8a614"
+            ],
+            "controls": {
+                "org-create-pol-rule-1eb3ff0293b8a614": "org1-create-pol-ctrl-ade78939f84a2915"
+            },
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "CREATE_WALLET",
+            "subOrgApplicability": false
+        },
+        "create-tft-out-pol-1-1dd07514ee3994a6": {
+            "id": "create-tft-out-pol-1-1dd07514ee3994a6",
+            "name": "Create Tft Policy",
+            "orgId": "ORG1",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "org-create-pol-rule-1eb3ff0293b8a614"
+            ],
+            "controls": {
+                "org-create-pol-rule-1eb3ff0293b8a614": "org1-create-pol-ctrl-ade78939f84a2915"
+            },
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "TRANSFER_OUT",
+            "subOrgApplicability": false
+        },
+        "org1-stl-pol-a1c04d5061eb9791": {
+            "id": "org1-stl-pol-a1c04d5061eb9791",
+            "name": "Tft Out Policy",
+            "orgId": "ORG1",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "hss-wish-rule-org1-0376b885338fae0a"
+            ],
+            "controls": {
+                "hss-wish-rule-org1-0376b885338fae0a": "exc-tft-pol-61817dd58dd76390"
+            },
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "TRANSFER_OUT",
+            "subOrgApplicability": false
+        }
+    },
+    "rules": {
+        "org-wish-rule-332a00d9c1e33aea": {
+            "id": "org-wish-rule-332a00d9c1e33aea",
+            "name": "Org Wish Creation Rule",
+            "enabled": true,
+            "expression": "ctx.actors[ctx.wish.actorId].orgId === ctx.wish.tgtOrgId && ctx.actors[ctx.wish.actorId].role === 'MAKER'"
+        },
+        "hss-wish-rule-org1-0376b885338fae0a": {
+            "id": "hss-wish-rule-org1-0376b885338fae0a",
+            "name": "HSS Wish Creation Rule",
+            "enabled": true,
+            "expression": "\n    ctx.actors[ctx.wish.actorId].orgId === 'HSS' &&\n    ctx.wish.tgtOrgId === 'ORG1' &&\n    ctx.wish.kind === 'TRANSFER_OUT' &&\n    ctx.wallets[ctx.wish.payload.fromWallet].meta['TYPE'] === 'SETTLEMENT' &&\n    ctx.actors[ctx.wish.actorId].role === 'MAKER'\n    "
+        },
+        "org-create-pol-rule-1eb3ff0293b8a614": {
+            "id": "org-create-pol-rule-1eb3ff0293b8a614",
+            "name": "Create Policy Rule",
+            "enabled": true
+        }
+    },
+    "controls": {
+        "org1-create-pol-ctrl-ade78939f84a2915": {
+            "id": "org1-create-pol-ctrl-ade78939f84a2915",
+            "name": "Create Policy Control",
+            "config": {
+                "orgs": [
+                    "ORG1"
+                ],
+                "roles": [
+                    "CHECKER"
+                ],
+                "minApprover": 1,
+                "timeoutInSeconds": 3600
+            }
+        },
+        "exc-tft-pol-61817dd58dd76390": {
+            "id": "exc-tft-pol-61817dd58dd76390",
+            "name": "Tft Out Control",
+            "config": {
+                "orgs": [
+                    "EXC"
+                ],
+                "roles": [
+                    "CHECKER"
+                ],
+                "minApprover": 1,
+                "timeoutInSeconds": 3600
+            }
+        }
+    },
+    "wallets": {
+        "wc-39e9fee755052cfb": {
+            "id": "wc-39e9fee755052cfb",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "MyBTCWallet",
+            "chain": "BitcoinTestnet3",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-2c7e10af6afa12ca": {
+            "id": "wc-2c7e10af6afa12ca",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-0",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-62a0ac87f7be79c6": {
+            "id": "wc-62a0ac87f7be79c6",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-2",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-93c01adf6f2c101d": {
+            "id": "wc-93c01adf6f2c101d",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-100",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-ee313d67d4666944": {
+            "id": "wc-ee313d67d4666944",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-100",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-422709171899a367": {
+            "id": "wc-422709171899a367",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-100",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-c3481b43a9baa9d2": {
+            "id": "wc-c3481b43a9baa9d2",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-W-A",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-78beeac6412e4a45": {
+            "id": "wc-78beeac6412e4a45",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-200",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-bc5d3c8374570103": {
+            "id": "wc-bc5d3c8374570103",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-201",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-afd0218c27906834": {
+            "id": "wc-afd0218c27906834",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-WALLET-203",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-90c0158b76543bb3": {
+            "id": "wc-90c0158b76543bb3",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-W-A",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-5d359d13e7b96d2d": {
+            "id": "wc-5d359d13e7b96d2d",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-W-A",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-59f8ba6f9aacf0e2": {
+            "id": "wc-59f8ba6f9aacf0e2",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-W-A",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-cbf2ac63ba03d443": {
+            "id": "wc-cbf2ac63ba03d443",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-W-A",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-21866da5a85285f3": {
+            "id": "wc-21866da5a85285f3",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "ETH-W-A",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        },
+        "wc-72b7480725d6aaae": {
+            "id": "wc-72b7480725d6aaae",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            },
+            "name": "EthStlWallet0",
+            "chain": "EthereumSepolia",
+            "orgId": "ORG1",
+            "provider": "DFNS"
+        }
+    },
+    "wish": {
+        "id": "hss-stl-wish-leg1-0e8f3ce5a0c0bc30",
+        "actorId": "MAKER_HSS",
+        "tgtOrgId": "ORG1",
+        "kind": "TRANSFER_OUT",
+        "settlementId": "stl-4d1c0e6081202735",
+        "leg1": true,
+        "payload": {
+            "fromWallet": "wc-2c7e10af6afa12ca",
+            "toWallet": " wc-876e9a15d3119252",
+            "amount": "2000000000000000"
+        }
+    }
+}

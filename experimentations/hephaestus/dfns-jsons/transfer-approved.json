@@ -1,0 +1,41 @@
+{
+    "id": "ap-1n1jc-vjmv6-88boh7novo8r1kn5",
+    "initiatorId": "us-6k44q-aoigv-99084ek3h0drc5ia",
+    "activity": {
+      "kind": "Wallets:Sign",
+      "transferRequest": {
+        "id": "xfr-32er3-pucmu-9388d63mp16n5qv4",
+        "status": "Pending",
+        "network": "EthereumSepolia",
+        "metadata": {},
+        "walletId": "wa-1ol09-a00l3-9e1p9meafj5q609u",
+        "requester": {},
+        "requestBody": {},
+        "dateRequested": "2024-10-06T14:26:53.469Z"
+      }
+    },
+    "status": "Approved",
+    "dateCreated": "2024-10-06T14:26:53.991Z",
+    "dateResolved": "2024-10-07T10:28:50.223Z",
+    "dateUpdated": "2024-10-07T10:28:50.224Z",
+    "decisions": [
+      {
+        "userId": "us-2mvk7-52afv-91gblr5mic2101bq",
+        "date": "2024-10-07T10:28:50.224Z",
+        "reason": "Approved by hephaestus",
+        "value": "Approved"
+      }
+    ],
+    "policyEvaluations": [
+      {
+        "policyId": "plc-1nc9f-7dqoc-9vtr5fdtdr9ld7k6",
+        "triggered": true,
+        "reason": "Rule always triggered."
+      },
+      {
+        "policyId": "plc-6dvn1-ln4o8-npqrkb82hvs2pra",
+        "triggered": true,
+        "reason": "Rule always triggered."
+      }
+    ]
+  }

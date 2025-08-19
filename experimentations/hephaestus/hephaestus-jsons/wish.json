@@ -1,0 +1,14 @@
+{
+    "id": "WP-2",
+    "name": "Wish Creation Policy",
+    "orgId": "ORG_ID",
+    "subOrgApplicability": false,
+    "wishKind": "WISH_CREATION",
+    "ruleIds": [
+        "WPR-1"
+    ],
+    "controls": {},
+    "enabled": true,
+    "dynamic": false,
+    "validFor": 1.7976931348623157e+308
+}

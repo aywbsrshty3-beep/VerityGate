@@ -1,0 +1,6 @@
+{
+    "id": "WPR-1",
+    "name": "Wish Creation Rule",
+    "enabled": true,
+    "expression": "ctx.actors[ctx.wish.actorId].orgId === ctx.wish.tgtOrgId && ctx.actors[ctx.wish.actorId].role === 'MAKER'"
+}

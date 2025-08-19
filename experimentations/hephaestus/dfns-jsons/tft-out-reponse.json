@@ -1,0 +1,19 @@
+{
+    "id": "xfr-32er3-pucmu-9388d63mp16n5qv4",
+    "walletId": "wa-1ol09-a00l3-9e1p9meafj5q609u",
+    "network": "EthereumSepolia",
+    "requester": {
+      "userId": "us-6k44q-aoigv-99084ek3h0drc5ia",
+      "tokenId": "to-6eep3-0gsqv-9aabtf3c7ohiio6p",
+      "appId": "ap-42qu7-ouhuu-8tr9sq2knl4heb18"
+    },
+    "requestBody": {
+      "kind": "Native",
+      "to": "0x8c182d6c273802081f1afc511a752167d318c3f7",
+      "amount": "500000000"
+    },
+    "metadata": { "asset": { "symbol": "SepoliaETH", "decimals": 18, "quotes": {} } },
+    "status": "Pending",
+    "dateRequested": "2024-10-06T14:26:53.469Z",
+    "approvalId": "ap-1n1jc-vjmv6-88boh7novo8r1kn5"
+}

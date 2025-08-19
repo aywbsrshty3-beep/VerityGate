@@ -1,0 +1,8 @@
+{
+    "userActionPayload": {
+        "network": "EthereumSepolia",
+        "name": "my-eth-wallet"
+    },
+    "userActionHttpMethod": "POST",
+    "userActionHttpPath": "/wallets"
+}

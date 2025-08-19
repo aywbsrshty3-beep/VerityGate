@@ -1,0 +1,108 @@
+{
+    "orgs": {
+        "LUMA-ORG": {
+            "id": "LUMA-ORG",
+            "name": "LUMA ORG",
+            "enabled": true
+        }
+    },
+    "actors": {
+        "LUCY": {
+            "id": "LUCY",
+            "name": "Lucy Maker",
+            "role": "MAKER",
+            "orgId": "LUMA-ORG",
+            "enabled": true
+        },
+        "MANDY": {
+            "id": "MANDY",
+            "name": "Mandy Checker",
+            "role": "CHECKER",
+            "orgId": "LUMA-ORG",
+            "enabled": true
+        }
+    },
+    "policies": {
+        "WP-1": {
+            "id": "WP-1",
+            "name": "Wish Creation Policy",
+            "orgId": "LUMA-ORG",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "WPR-1"
+            ],
+            "controls": {},
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "WISH_CREATION",
+            "subOrgApplicability": false
+        },
+        "CREATE-POL-1": {
+            "id": "CREATE-POL-1",
+            "name": "Create Policy Policy",
+            "orgId": "LUMA-ORG",
+            "dynamic": false,
+            "enabled": true,
+            "ruleIds": [
+                "CREATE-POL-RULE-1"
+            ],
+            "controls": {
+                "CREATE-POL-RULE-1": "CREATE-POL-CONTROL-1"
+            },
+            "validFor": 1.7976931348623157e+308,
+            "wishKind": "CREATE_POLICY",
+            "subOrgApplicability": false
+        }
+    },
+    "rules": {
+        "WPR-1": {
+            "id": "WPR-1",
+            "name": "Wish Creation Rule",
+            "enabled": true,
+            "expression": "ctx.actors[ctx.wish.actorId].orgId === ctx.wish.tgtOrgId && ctx.actors[ctx.wish.actorId].role === 'MAKER'"
+        },
+        "CREATE-POL-RULE-1": {
+            "id": "CREATE-POL-RULE-1",
+            "name": "Create Policy Rule",
+            "enabled": true
+        }
+    },
+    "controls": {
+        "CREATE-POL-CONTROL-1": {
+            "id": "CREATE-POL-CONTROL-1",
+            "name": "Create Policy Control",
+            "config": {
+                "orgs": [
+                    "LUMA-ORG"
+                ],
+                "roles": [
+                    "CHECKER"
+                ],
+                "minApprover": 1,
+                "timeoutInSeconds": 3600
+            }
+        }
+    },
+    "wish": {
+        "id": "wish-ef87f3fe-30d0-44b3-9dee-98652d1ccc2c",
+        "actorId": "LUCY",
+        "tgtOrgId": "LUMA-ORG",
+        "kind": "CREATE_POLICY",
+        "payload": {
+            "id": "CREATE-WALLET-POL-1",
+            "name": "Create Wallet Policy",
+            "orgId": "LUMA-ORG",
+            "subOrgApplicability": false,
+            "wishKind": "CREATE_WALLET",
+            "ruleIds": [
+                "CREATE-POL-RULE-1"
+            ],
+            "controls": {
+                "CREATE-POL-RULE-1": "CREATE-POL-CONTROL-1"
+            },
+            "enabled": true,
+            "dynamic": false,
+            "validFor": 1.7976931348623157e+308
+        }
+    }
+}

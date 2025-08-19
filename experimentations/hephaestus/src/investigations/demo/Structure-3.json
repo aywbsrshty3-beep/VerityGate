@@ -1,0 +1,95 @@
+{
+    "orgs": {
+        "org-123f8353-6a3a-4283-b703-0a29867208b3": {
+            "id": "org-123f8353-6a3a-4283-b703-0a29867208b3",
+            "name": "Customer",
+            "enabled": true
+        }
+    },
+    "actors": {
+        "cust-maker-bf06915f-3938-466a-b73f-9b91cc911f7e": {
+            "id": "cust-maker-bf06915f-3938-466a-b73f-9b91cc911f7e",
+            "name": "Customer Maker",
+            "role": "MAKER",
+            "orgId": "org-123f8353-6a3a-4283-b703-0a29867208b3",
+            "enabled": true
+        },
+        "cust-checker-e34fee8f-9924-4315-92f6-c2a1764c8b4f": {
+            "id": "cust-checker-e34fee8f-9924-4315-92f6-c2a1764c8b4f",
+            "name": "Customer Checker",
+            "role": "CHECKER",
+            "orgId": "org-123f8353-6a3a-4283-b703-0a29867208b3",
+            "enabled": true
+        }
+    },
+    "policies": {
+        "wish-create-policy-07256dcb-8dca-4715-b1ac-34f373df394e": {
+            "id": "wish-create-policy-07256dcb-8dca-4715-b1ac-34f373df394e",
+            "name": "Wish Creation Policy",
+            "orgId": "org-123f8353-6a3a-4283-b703-0a29867208b3",
+            "subOrgApplicability": false,
+            "wishKind": "WISH_CREATION",
+            "ruleIds": [
+                "wish-create-rule-f169b8a2-e55a-4b5d-8ede-11172a7b9764"
+            ],
+            "controls": {},
+            "enabled": true,
+            "validFor": 1.7976931348623157e+308
+        },
+        "create-wallet-policy-084755d4-5da0-4446-8c63-07e463d8c608": {
+            "id": "create-wallet-policy-084755d4-5da0-4446-8c63-07e463d8c608",
+            "name": "Create Wallet Policy",
+            "orgId": "org-123f8353-6a3a-4283-b703-0a29867208b3",
+            "subOrgApplicability": false,
+            "wishKind": "CREATE_WALLET",
+            "ruleIds": [
+                "policy-rule-d849a1ec-c8e3-44a3-8d32-79af5171230e"
+            ],
+            "controls": {
+                "policy-rule-d849a1ec-c8e3-44a3-8d32-79af5171230e": "policy-control-04298f62-e349-4850-b602-702140dd5d0e"
+            },
+            "enabled": true,
+            "validFor": 1.7976931348623157e+308
+        }
+    },
+    "rules": {
+        "wish-create-rule-f169b8a2-e55a-4b5d-8ede-11172a7b9764": {
+            "id": "wish-create-rule-f169b8a2-e55a-4b5d-8ede-11172a7b9764",
+            "name": "Wish Creation Rule",
+            "enabled": true,
+            "expression": "ctx.actors[ctx.wish.actorId].orgId === ctx.wish.tgtOrgId && ctx.actors[ctx.wish.actorId].role === 'MAKER'"
+        },
+        "policy-rule-d849a1ec-c8e3-44a3-8d32-79af5171230e": {
+            "id": "policy-rule-d849a1ec-c8e3-44a3-8d32-79af5171230e",
+            "name": "Transfer Out Rule",
+            "enabled": true
+        }
+    },
+    "controls": {
+        "policy-control-04298f62-e349-4850-b602-702140dd5d0e": {
+            "id": "policy-control-04298f62-e349-4850-b602-702140dd5d0e",
+            "name": "CUSTOMER-CTRL",
+            "config": {
+                "roles": [
+                    "CHECKER"
+                ],
+                "orgs": [
+                    "org-123f8353-6a3a-4283-b703-0a29867208b3"
+                ],
+                "minApprover": 1,
+                "timeoutInSeconds": 3600
+            }
+        }
+    },
+    "wish": {
+        "id": "wish-9753d70f-62fd-4ecc-9a21-3bcfdcfb0e5d",
+        "actorId": "cust-maker-bf06915f-3938-466a-b73f-9b91cc911f7e",
+        "tgtOrgId": "org-123f8353-6a3a-4283-b703-0a29867208b3",
+        "kind": "CREATE_WALLET",
+        "payload": {
+            "name": "TJ WALLET",
+            "chain": "ETH",
+            "provider": "THALES"
+        }
+    }
+}

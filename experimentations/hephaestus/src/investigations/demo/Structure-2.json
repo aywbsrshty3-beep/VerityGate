@@ -1,0 +1,161 @@
+{
+    "orgs": {
+        "CUT-ORG-1": {
+            "id": "CUT-ORG-1",
+            "name": "Customer",
+            "enabled": true
+        },
+        "EXC-ORG-1": {
+            "id": "EXC-ORG-1",
+            "name": "Exchange",
+            "enabled": true
+        }
+    },
+    "actors": {
+        "E-M-1": {
+            "id": "E-M-1",
+            "name": "Exchange Maker",
+            "role": "MAKER",
+            "orgId": "EXC-ORG-1",
+            "enabled": true
+        },
+        "E-C-1": {
+            "id": "E-C-1",
+            "name": "Exchange Checker",
+            "role": "CHECKER",
+            "orgId": "EXC-ORG-1",
+            "enabled": true
+        },
+        "C-M-1": {
+            "id": "C-M-1",
+            "name": "Customer Maker",
+            "role": "MAKER",
+            "orgId": "CUT-ORG-1",
+            "enabled": true
+        },
+        "C-C-1": {
+            "id": "C-C-1",
+            "name": "Customer Checker",
+            "role": "CHECKER",
+            "orgId": "CUT-ORG-1",
+            "enabled": true
+        }
+    },
+    "policies": {
+        "WCP-1": {
+            "id": "WCP-1",
+            "name": "Wish Creation Policy",
+            "orgId": "CUT-ORG-1",
+            "subOrgApplicability": false,
+            "wishKind": "WISH_CREATION",
+            "ruleIds": [
+                "WPR-1"
+            ],
+            "controls": {},
+            "enabled": true,
+            "validFor": 1.7976931348623157e+308
+        },
+        "TFTO-CUST-POL-1": {
+            "id": "TFTO-CUST-POL-1",
+            "name": "Transfer Out Customer Policy",
+            "orgId": "CUT-ORG-1",
+            "subOrgApplicability": false,
+            "wishKind": "TRANSFER_OUT",
+            "ruleIds": [
+                "CUST-RULE-1"
+            ],
+            "controls": {
+                "CUST-RULE-1": "CUST-POL-CTRL-1"
+            },
+            "enabled": true,
+            "validFor": 1.7976931348623157e+308
+        },
+        "TFTO-EXC-POL-1": {
+            "id": "TFTO-EXC-POL-1",
+            "name": "Transfer Out Exchange Policy",
+            "orgId": "CUT-ORG-1",
+            "subOrgApplicability": false,
+            "wishKind": "TRANSFER_OUT",
+            "ruleIds": [
+                "EXC-RULE-1"
+            ],
+            "controls": {
+                "EXC-RULE-1": "EXC-POL-CTRL-1"
+            },
+            "enabled": true,
+            "validFor": 1.7976931348623157e+308
+        }
+    },
+    "rules": {
+        "WPR-1": {
+            "id": "WPR-1",
+            "name": "Wish Creation Rule",
+            "enabled": true,
+            "expression": "\n    ((ctx.actors[ctx.wish.actorId].orgId === ctx.wish.tgtOrgId && ctx.actors[ctx.wish.actorId].role === \"MAKER\") ||\n    (ctx.orgs[ctx.actors[ctx.wish.actorId].orgId].id === \"EXC-ORG-1\" && ctx.wallets[ctx.wish.payload.fromWallet].meta[\"TYPE\"] === \"SETTLEMENT\"))\n    "
+        },
+        "CUST-RULE-1": {
+            "id": "CUST-RULE-1",
+            "name": "Transfer Out Rule",
+            "expression": "\n    ctx.actors[ctx.wish.actorId].orgId === ctx.wish.tgtOrgId && \n    ctx.actors[ctx.wish.actorId].role === \"MAKER\" &&\n    ctx.wallets[ctx.wish.payload.fromWallet].orgId === ctx.wish.tgtOrgId \n    ctx.wallets[ctx.wish.payload.fromWallet].meta[\"TYPE\"] === \"SETTLEMENT\"\n  ",
+            "enabled": true
+        },
+        "EXC-RULE-1": {
+            "id": "EXC-RULE-1",
+            "name": "Transfer Out Rule",
+            "expression": "\n    ctx.orgs[ctx.actors[ctx.wish.actorId].orgId].id === \"EXC-ORG-1\" && \n    ctx.wallets[ctx.wish.payload.fromWallet].orgId === \"CUST-ORG-1\" &&\n    ctx.wallets[ctx.wish.payload.fromWallet].meta[\"TYPE\"] === \"SETTLEMENT\"\n  ",
+            "enabled": true
+        }
+    },
+    "controls": {
+        "CUST-POL-CTRL-1": {
+            "id": "CUST-POL-CTRL-1",
+            "name": "CUSTOMER-CTRL",
+            "config": {
+                "roles": [
+                    "CHECKER"
+                ],
+                "orgs": [
+                    "CUT-ORG-1"
+                ],
+                "minApprover": 1,
+                "timeoutInSeconds": 3600
+            }
+        },
+        "EXC-POL-CTRL-1": {
+            "id": "EXC-POL-CTRL-1",
+            "name": "EXCHANGE-CTRL",
+            "config": {
+                "roles": [
+                    "CHECKER"
+                ],
+                "orgs": [
+                    "EXC-ORG-1"
+                ],
+                "minApprover": 1,
+                "timeoutInSeconds": 3600
+            }
+        }
+    },
+    "wallets": {
+        "MyBTCWallet": {
+            "id": "MyBTCWallet",
+            "name": "BTC Trading Wallet",
+            "orgId": "CUT-ORG-1",
+            "chain": "TESTNET",
+            "meta": {
+                "TYPE": "SETTLEMENT"
+            }
+        }
+    },
+    "wish": {
+        "id": "WISH-2",
+        "actorId": "E-M-1",
+        "tgtOrgId": "CUT-ORG-1",
+        "kind": "TRANSFER_OUT",
+        "payload": {
+            "fromWallet": "MyBTCWallet",
+            "toAddress": "0x546",
+            "amount": "8000"
+        }
+    }
+}
